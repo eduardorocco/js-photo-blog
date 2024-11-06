@@ -21,5 +21,12 @@ img {
 }
 
 html {
-    background-color: black;
+    background-color: cornflowerblue;
+}
+
+.header-container {
+    background-image: url("../img/wall.png");
+    text-align: center;
+    align-content: center;
+    height: 150px;
 }
