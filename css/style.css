@@ -49,6 +49,7 @@ html {
 .col-container .row {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 20px;
 }
 
 .card {
