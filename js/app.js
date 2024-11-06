@@ -57,6 +57,7 @@ axios
                 <div class="col">
                     <div class="card">
                         <img src="${ url }" class="card-img" alt="">
+                        <img src="./img/pin.svg" class="pin" alt="">
                         <div class="card-body">
                             <p class="card-text">${ title }</p>
                         </div>

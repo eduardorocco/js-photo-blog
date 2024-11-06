@@ -67,6 +67,7 @@ html {
     background-color: white;
     padding: 20px;
     height: 100%;
+    position: relative;
 }
 
 .col {
@@ -86,4 +87,11 @@ html {
     font-style: normal;
     font-size: 28px;
     padding-top: 10px;
+}
+
+.pin {
+    width: 35px;
+    position: absolute;
+    top: -15px;
+    left: 45%;
 }
