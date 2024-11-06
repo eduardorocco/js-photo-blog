@@ -1,0 +1,25 @@
+/* RESET RULES*/
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+a {
+	color: currentColor;
+	text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+html {
+    background-color: black;
+}
