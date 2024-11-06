@@ -39,19 +39,40 @@ html {
 
 /* MAIN */
 
-.col-container {
-    max-width: 1024px;
-    margin: 0 auto;
-	padding: 0 120px;
+.container {
+	max-width: 1024px;
+	margin: 0 auto;
+    padding-top: 50px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 0;
     
 }
 
-.col-container .row {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 20px;
+.row > * {
+	padding: 0 10px;
 }
 
 .card {
-    width: 33%;
+    background-color: white;
+    padding: 20px;
+    height: 100%;
+}
+
+.col {
+    width: calc(100% / 3);
+}
+
+.card-img {
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	object-position: center;
+}
+
+.card-text {
+    padding-top: 10px;
 }

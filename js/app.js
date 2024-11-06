@@ -54,10 +54,13 @@ axios
             const { title , url } = card
 
             const imgCardHTML = `
-                <div class="card">
-                    <figure>
-                        <img src="${url}" alt="">
-                    </figure>
+                <div class="col">
+                    <div class="card">
+                        <img src="${ url }" class="card-img" alt="">
+                        <div class="card-body">
+                            <p class="card-text">${ title }</p>
+                        </div>
+                    </div>
                 </div>
             `
             root.innerHTML += imgCardHTML
