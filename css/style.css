@@ -21,12 +21,36 @@ img {
 }
 
 html {
-    background-color: cornflowerblue;
+    background-image: url("../img/cork.png");
 }
+
+/* HEADER */
 
 .header-container {
     background-image: url("../img/wall.png");
     text-align: center;
     align-content: center;
     height: 150px;
+}
+
+.header-container h1 {
+    font-size: 80px;
+}
+
+/* MAIN */
+
+.col-container {
+    max-width: 1024px;
+    margin: 0 auto;
+	padding: 0 120px;
+    
+}
+
+.col-container .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 33%;
 }
