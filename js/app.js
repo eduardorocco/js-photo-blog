@@ -3,7 +3,9 @@
 
 const cardRow = document.querySelector('.row')
 
+const overlayCont = document.getElementById('overlay-container')
 
+//console.log(overlayCont);
 
 const BASE_URL = 'https://jsonplaceholder.typicode.com/'
 
@@ -40,6 +42,9 @@ axios
             if (cardElement) {
                 
                 const imgElement = cardElement.querySelector('.card-img')
+
+                overlayCont.classList.toggle("d-none")
+                
                 
                 if (imgElement) {
 
