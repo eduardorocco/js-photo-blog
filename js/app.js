@@ -33,7 +33,17 @@ axios
 
         appendCard(cards,cardRow)
 
-		
+        const cardElements= document.querySelectorAll('.card')
+
+        cardElements.forEach((cardElement) => {
+            
+            cardElement.addEventListener('click', function (event) {
+
+              console.log('click');
+
+            })
+            
+          })
 
 	})
 
@@ -41,6 +51,7 @@ axios
         
 		console.log(err)
 	})
+
 
     function appendCard(cards, root) {
 
@@ -70,3 +81,4 @@ axios
 
     }
 
+   
