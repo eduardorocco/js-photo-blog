@@ -1,5 +1,5 @@
 
-console.log(axios)
+//console.log(axios)
 
 const cardRow = document.querySelector('.row')
 
@@ -11,7 +11,7 @@ let url_body = 'photos'
 
 const endpoint = BASE_URL + url_body
 
-console.log(endpoint)
+//console.log(endpoint)
 
 axios
 
@@ -29,24 +29,25 @@ axios
 
 		const cards = res.data
 
-        console.log(cards);
+        //console.log(cards)
 
         appendCard(cards,cardRow)
 
-        const cardElements= document.querySelectorAll('.card')
-
-        cardElements.forEach((cardElement) => {
+        cardRow.addEventListener('click', function (event) {
             
-            cardElement.addEventListener('click', function (event) {
-
-              console.log('click');
-
-            })
+            const cardElement = event.target.closest('.card')
             
-          })
+            if (cardElement) {
+                
+                const imgElement = cardElement.querySelector('.card-img')
+                
+                if (imgElement) {
 
-	})
-
+                    console.log('click', imgElement.src)
+                }
+            }
+        });
+    })
 	.catch((err) => {
         
 		console.log(err)
@@ -56,11 +57,11 @@ axios
     function appendCard(cards, root) {
 
 
-        console.log(cards, root)
+        // console.log(cards, root)
 
         cards.forEach((card) => {
 
-            console.log(card)
+            // console.log(card)
 
             const { title , url } = card
 
