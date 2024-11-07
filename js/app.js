@@ -3,9 +3,13 @@
 
 const cardRow = document.querySelector('.row')
 
-const overlayCont = document.getElementById('overlay-container')
+const overlayContainer = document.querySelector('.overlay-container')
 
-//console.log(overlayCont);
+const overlayContent = document.querySelector('.overlay-content')
+
+const closeBtn = document.getElementById('close-button')
+
+console.log(closeBtn);
 
 const BASE_URL = 'https://jsonplaceholder.typicode.com/'
 
@@ -14,6 +18,7 @@ let url_body = 'photos'
 const endpoint = BASE_URL + url_body
 
 //console.log(endpoint)
+
 
 axios
 
@@ -43,48 +48,62 @@ axios
                 
                 const imgElement = cardElement.querySelector('.card-img')
 
-                overlayCont.classList.toggle("d-none")
+                overlayContainer.classList.toggle("d-none")
                 
                 
                 if (imgElement) {
 
-                    console.log('click', imgElement.src)
+                    //console.log('click', imgElement.src)
+
+                    overlayContent.innerHTML += `<img src="${imgElement.src}" alt="">`
+
+
                 }
+
             }
         });
     })
 	.catch((err) => {
         
 		console.log(err)
-	})
+})
 
 
-    function appendCard(cards, root) {
 
 
-        // console.log(cards, root)
+closeBtn.addEventListener('click', function () {
 
-        cards.forEach((card) => {
+    overlayContainer.classList.add('d-none')
+    
+})
 
-            // console.log(card)
 
-            const { title , url } = card
 
-            const imgCardHTML = `
-                <div class="col">
-                    <div class="card">
-                        <img src="${ url }" class="card-img" alt="">
-                        <img src="./img/pin.svg" class="pin" alt="">
-                        <div class="card-body">
-                            <p class="card-text">${ title }</p>
-                        </div>
+function appendCard(cards, root) {
+
+
+    // console.log(cards, root)
+
+    cards.forEach((card) => {
+
+        // console.log(card)
+
+        const { title , url } = card
+
+        const imgCardHTML = `
+            <div class="col">
+                <div class="card">
+                    <img src="${ url }" class="card-img" alt="">
+                    <img src="./img/pin.svg" class="pin" alt="">
+                    <div class="card-body">
+                        <p class="card-text">${ title }</p>
                     </div>
                 </div>
-            `
-            root.innerHTML += imgCardHTML
+            </div>
+        `
+        root.innerHTML += imgCardHTML
 
-        })
+    })
 
-    }
+}
 
-   
