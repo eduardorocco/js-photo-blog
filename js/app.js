@@ -59,7 +59,9 @@ axios
 
                     const closeBtn = document.getElementById('close-button')
 
-                    console.log(closeBtn);
+                    document.body.classList.add('hidden-overflow')
+
+                    // console.log(closeBtn);
 
 
 
@@ -67,7 +69,7 @@ axios
 
                         overlayContainer.classList.add('d-none')
 
-                        console.log('object');
+                        document.body.classList.remove('hidden-overflow')
 
                         overlayContent.innerHTML = ''
 

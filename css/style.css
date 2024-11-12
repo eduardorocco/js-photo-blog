@@ -59,7 +59,7 @@ html {
 
 }
 
-.row>* {
+.row> * {
     padding: 0 20px;
     padding-bottom: 20px;
 }
@@ -99,15 +99,14 @@ html {
 }
 
 .overlay-container {
-    width: 100%;
+    width: 100vw;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .overlay-bg {
@@ -179,4 +178,8 @@ button {
         margin: 0 auto;
         padding-top: 35px;
     }
+}
+
+.hidden-overflow {
+    overflow: hidden;
 }
